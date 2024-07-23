@@ -1,0 +1,61 @@
+.scene-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  transition: margin-left 0.5s;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgb(172, 210, 231);
+  color: rgb(45, 58, 66);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 20px;
+  transition: width 0.5s;
+  z-index: 1;
+  width: 300px; /* Initial width */
+}
+
+.sidebar.closed {
+  width: 0;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  color: rgb(137, 111, 77);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.canvas {
+  flex-grow: 1;
+  height: 100vh;
+}
+
+/* Ensure no scrollbars appear */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block; /* Removes the inline-block space */
+}
